@@ -2,7 +2,7 @@ from pytube import YouTube
 from pytube.cli import on_progress
 
 def Download(link):
-    youtubeLink = YouTube(link, on_progress_callback=on_progress)
+    youtubeLink = YouTube(link, on_progress_callback=on_progress) # 'on_progress_callback' for display progress bar
     youtubeObject = youtubeLink.streams.get_highest_resolution()
     
     try:
